@@ -11,7 +11,6 @@ const App = () => {
   }, []);
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    console.log(`Apertou a tecla ${e.code}`);
     switch (e.code) {
       case 'KeyA':
       case 'ArrowLeft':
@@ -35,7 +34,7 @@ const App = () => {
   return (
     <C.Container>
       <C.Map>
-        <Character x={char.x} y={char.y} />
+        <Character x={char.x} y={char.y} side={char.side} />
       </C.Map>
     </C.Container>
   );
